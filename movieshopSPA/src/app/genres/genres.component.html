@@ -1,0 +1,9 @@
+
+<ul>
+    <li *ngFor="let item of genres">
+        <a [routerLink] = "[ '/genre/', item.id]">
+            {{item.name}}
+        </a>
+    </li>
+</ul>
+<!-- <button type="button" class="btn btn-primary">button</button> -->
