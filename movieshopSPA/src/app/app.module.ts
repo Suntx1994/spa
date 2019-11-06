@@ -9,6 +9,11 @@ import { HeaderComponent } from './core/layout/header/header.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MovieListComponent } from './movie/movie-list/movie-list.component';
+import { HomeComponent } from './home/home.component';
+import { MovieCardComponent } from './Shared/compoent/movie-card/movie-card.component';
+
+
+
 
 
 
@@ -18,7 +23,9 @@ import { MovieListComponent } from './movie/movie-list/movie-list.component';
     AppComponent,
     GenresComponent,
     HeaderComponent,
-    MovieListComponent
+    MovieListComponent,
+    HomeComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,

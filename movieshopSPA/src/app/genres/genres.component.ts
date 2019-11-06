@@ -24,6 +24,5 @@ export class GenresComponent implements OnInit {
         // console.log(this.genres);
       }
     );
-
   }
 }

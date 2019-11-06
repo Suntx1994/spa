@@ -1,0 +1,9 @@
+
+<div class="card" style="width: 18rem;" *ngIf="movie" >
+  <img [src]="movie.posterUrl" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
+    <p class="card-text">{{movie.overview}}</p>
+    <button href="#" class="btn btn-primary" (click) = 'MovieClick(movie)' >Buy Movie</button>
+  </div>
+</div>
