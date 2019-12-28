@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable, throwError, Subscription } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { User } from 'src/app/Shared/Models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,11 @@ export class APIService {
       // convert the type to type which you want
       catchError(this.handleError)
     );
+  }
+
+  create(path: string, resource: Object = {}, options?): Observable<any> {
+    return this.http.post(`${environment.apiUrl}${path}`, JSON.stringify(resource), options)
+      .pipe(map(response => response), catchError(e => throwError(new Error('SOMETHING BAD HAPPENED'))));
   }
 
   private handleError(error: HttpErrorResponse) {
